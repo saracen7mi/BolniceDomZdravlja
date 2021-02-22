@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bolnicedomzdravlja">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activits.DetailPublicHealthActivity"
+            android:parentActivityName=".activits.PublicHealthActivity"/>
+        <activity android:name=".activits.DetailHospitalActivity"
+            android:parentActivityName=".activits.HospitalPublicActivity"/>
+        <activity android:name=".activits.PublicHealthActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".activits.HospitalSpisialActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".activits.HospitalPublicActivity"
+            android:parentActivityName=".MainActivity"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCRP3B4l1_uWEm-O6C6-bkL462169wUl8Q" />
+
+    </application>
+</manifest>
